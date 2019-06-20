@@ -15,12 +15,11 @@ class InteractiveRecord
 
 
     table_info = DB[:conn].execute(sql)
-    column_names = []
-    table_info.each do |row|
-      column_names << row["name"]
-    end
-    column_names.compact
-  end
+    
+   table_info.map do |column| 
+      column["name"]
+    end.compact
+  end 
   
   def initialize(options={})
     options.each do |property, value|
