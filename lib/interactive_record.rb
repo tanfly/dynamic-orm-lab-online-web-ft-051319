@@ -21,7 +21,7 @@ class InteractiveRecord
     end.compact
   end 
   
-  def initialize(atrributes_hash={})
+  def initialize(attributes_hash={})
     attributes_hash.each do |key, value|
       self.send("#{key}=", value)
     end
