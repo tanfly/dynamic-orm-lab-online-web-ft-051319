@@ -20,7 +20,7 @@ class InteractiveRecord
   end 
 
 
-   def initialize(attributes = {})
+   def initialize(attributes_hash = {})
     attributes.each do |k, v|
       self.send("#{k}=", v)
     end 
