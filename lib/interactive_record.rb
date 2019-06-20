@@ -61,6 +61,7 @@ class InteractiveRecord
     sql = "SELECT * FROM #{self.table_name} WHERE #{attribute} = '?'"
     DB[:conn].execute(sql, attribute)
   end
+end
     
 
   
