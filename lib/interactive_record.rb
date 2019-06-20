@@ -22,7 +22,7 @@ class InteractiveRecord
   end 
   
   def initialize(atrributes_hash={})
-    attributes_hash.each do |property, value|
+    attributes_hash.each do |key, value|
       self.send("#{property}=", value)
     end
   end
