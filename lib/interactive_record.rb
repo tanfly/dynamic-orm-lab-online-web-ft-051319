@@ -56,7 +56,7 @@ class InteractiveRecord
   end
   
   def self.find_by(attribute)
-    
+    self.column_names.each do |col_name|
     sql = "SELECT * FROM #{self.table_name} WHERE '' = '?'"
     DB[:conn].execute(sql, )
   end
