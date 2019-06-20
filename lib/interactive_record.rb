@@ -59,7 +59,7 @@ class InteractiveRecord
     self.column_names.each do |col_name| 
       if atrribute == col_name
     sql = "SELECT * FROM #{self.table_name} WHERE #{attribute} = '?'"
-    DB[:conn].execute(sql, )
+    DB[:conn].execute(sql, attribute)
   end
     
 
